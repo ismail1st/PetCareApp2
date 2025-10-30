@@ -15,8 +15,8 @@ import ReminderList from "./components/ReminderList";
 import Login from "./components/Login";
 import toast, { Toaster } from "react-hot-toast";
 
-// ✅ Backend URL
-const API_BASE = "http://localhost:3001";
+// ✅ Use environment variable for flexible backend connection
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -124,7 +124,7 @@ function App() {
 
   // ✅ Login
   const handleLogin = (userData) => {
-    console.log("Logging in user:", userData); // for debugging
+    console.log("Logging in user:", userData);
     setUser(userData);
     localStorage.setItem("user", JSON.stringify(userData));
     toast.success(`Welcome ${userData.username}!`);
