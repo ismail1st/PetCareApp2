@@ -1,16 +1,24 @@
-# React + Vite
+# LINK TO OUR OTHER REPO THAT HAD AN ISSUE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://github.com/Da-has/Pet-Care-App
 
-Currently, two official plugins are available:
+# Pet Care Tracker
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A simple React-based web application that helps users track their pets, view a list of all pets, and add new pets easily.  
+Built with **React**, **Vite**, and **React Router**, this app provides a fast and responsive experience for managing your pet care data.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **Home Page** — Welcome page introducing the app.
+- **Pet List** — Displays a list of all registered pets.
+- **Add Pet Form** — Allows users to add new pets with details.
+- **Toast Notifications** — Quick success/error messages powered by [`react-hot-toast`](https://react-hot-toast.com/).
+- **Navigation Bar** — Seamless routing between pages using React Router.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## License
+
+MIT
