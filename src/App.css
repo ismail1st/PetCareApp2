@@ -1,0 +1,455 @@
+/* === GLOBAL STYLES === */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --text-color: #152022;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  padding: 0;
+  background-image: url("/frame.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* === NAVBAR === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: black;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* === USER PROFILE IN NAVBAR === */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  margin: 0;
+  font-weight: bold;
+  color: #000;
+}
+
+.logout-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+
+/* === HOME PAGE === */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: calc(100vh - 76px);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0 20px;
+  background: transparent;
+}
+
+.home h1 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 16px;
+}
+
+.home p {
+  font-size: 1.2rem;
+  color: #374151;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+/* === REMINDERS === */
+.reminder-list {
+  background: #f9fafb;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  color: black;
+}
+
+.reminder-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="date"] {
+  color: rgb(243, 243, 243);
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.reminder-form input[type="date"],
+.reminder-form input[type="text"] {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  color: black;
+}
+
+.reminder-form button {
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.reminder-form button:hover {
+  background: #2563eb;
+}
+
+.reminder-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  color: black;
+}
+
+.no-reminders {
+  color: black;
+}
+
+.upcoming-reminders {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  margin-top: 40px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  color: black;
+}
+
+.upcoming-reminders h2 {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.upcoming-reminders ul {
+  list-style: none;
+  padding: 0;
+}
+
+.upcoming-reminders li {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  padding: 6px 0;
+  color: black;
+}
+
+/* === PET LIST === */
+.pet-list {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 28px;
+  justify-content: center;
+  justify-items: center;
+  padding: 20px 0;
+  width: 95%;
+  max-width: 1300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* === PET CARD === */
+.pet-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 280px;
+  color: black;
+}
+
+.pet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.pet-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* Pet card buttons */
+.pet-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn-edit {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  background-color: #0056b3;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+/* === FORMS (Add/Edit/Login) === */
+.add-pet-form,
+.edit-pet-form,
+.login-container {
+  max-width: 500px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 30px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.add-pet-form h2,
+.edit-pet-form h2,
+.login-container h2 {
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.add-pet-form input,
+.edit-pet-form input,
+.login-container input,
+.add-pet-form textarea,
+.edit-pet-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+}
+
+.add-pet-form button,
+.edit-pet-form button,
+.login-container button {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.add-pet-form button:hover,
+.edit-pet-form button:hover,
+.login-container button:hover {
+  background-color: #1e3a8a;
+  transform: translateY(-1px);
+}
+
+/* Placeholder text */
+input::placeholder,
+textarea::placeholder {
+  color: white;
+}
+
+/* === SEARCH BAR === */
+.search-input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px 14px;
+  margin: 10px auto 24px;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-size: 15px;
+  background-color: white;
+  color: black;
+}
+
+.search-input::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.2);
+}
+
+/* === RESPONSIVE LAYOUT === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .search-input {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pet-card img {
+    height: 200px;
+  }
+  .navbar a {
+    font-size: 14px;
+  }
+  .add-pet-form h2,
+  .edit-pet-form h2,
+  .login-container h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* === CUSTOM STYLES ADDED === */
+
+/* LOGIN INPUTS */
+.login-container input {
+  background-color: white;
+  color: black;
+}
+
+.login-container input::placeholder {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+/* ADD PET FORM INPUTS */
+.add-pet-form input,
+.add-pet-form textarea {
+  background-color: white;
+  color: black;
+}
+
+.add-pet-form input::placeholder,
+.add-pet-form textarea::placeholder {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+/* REMINDER TAB INPUTS */
+.reminder-form input[type="text"],
+.reminder-form input[type="date"] {
+  background-color: white;
+  color: black;
+}
+
+.reminder-form input[type="text"]::placeholder,
+.reminder-form input[type="date"]::placeholder {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+/* REMINDER TAB DELETE BUTTON */
+.reminder-item button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.reminder-item button:hover {
+  background-color: #dc2626;
+}

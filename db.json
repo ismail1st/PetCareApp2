@@ -1,0 +1,114 @@
+{
+  "pets": [
+    {
+      "id": "2",
+      "name": "Mittens",
+      "age": 2,
+      "breed": "tabby-cat",
+      "health": "Excellent",
+      "grooming": "Monthly trim",
+      "exercise": "1 long walk",
+      "vaccination": "Up to date",
+      "image": "https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500"
+    },
+    {
+      "id": "3",
+      "name": "Peep",
+      "breed": "Parrot (African Grey)",
+      "age": 5,
+      "health": "Bright feathers, alert and playful.",
+      "grooming": "Regular feather preening; occasional misting or baths.",
+      "exercise": "Flying time and mental stimulation with toys.",
+      "vaccination": "Typically none required; annual vet check recommended.",
+      "image": "https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&q=60&w=500"
+    },
+    {
+      "id": "4",
+      "name": "Bella",
+      "breed": "Golden Retriever",
+      "age": 3,
+      "health": "Excellent overall health; shiny coat and energetic.",
+      "grooming": "Brush twice a week and bathe monthly.",
+      "exercise": "Daily walks and playtime for at least 1 hour.",
+      "vaccination": "All core vaccines up to date.",
+      "image": "https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&q=60&w=500"
+    },
+    {
+      "id": "5",
+      "name": "Goldie",
+      "breed": "Goldfish",
+      "age": 2,
+      "health": "Healthy scales and active swimmer.",
+      "grooming": "Keep tank clean; filter water regularly.",
+      "exercise": "Swimming space in a properly sized tank.",
+      "vaccination": "Not applicable; maintain water quality to prevent disease.",
+      "image": "https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&q=60&w=500"
+    }
+  ],
+  "reminders": [
+    {
+      "id": "1",
+      "date": "2025-10-30",
+      "note": "Vet appointment for Bella at 3 PM"
+    },
+    {
+      "id": "2",
+      "date": "2025-11-02",
+      "note": "Grooming appointment for Milo"
+    },
+    {
+      "date": "2025-10-31",
+      "note": "Bella's vet check-up",
+      "id": 1761738963119
+    },
+    {
+      "date": "2025-10-31",
+      "note": " brad needs nail cliipin",
+      "id": 1761810499463
+    }
+  ],
+  "events": [
+    {
+      "id": "3",
+      "petId": 2,
+      "date": "2025-11-10",
+      "note": "Mittens' flea treatment"
+    },
+    {
+      "id": "4",
+      "petId": 2,
+      "date": "2025-11-25",
+      "note": "Mittens vet check-up"
+    },
+    {
+      "id": "5",
+      "petId": 3,
+      "date": "2025-10-28",
+      "note": "Sunny's feather check and trimming"
+    },
+    {
+      "id": "6",
+      "petId": 3,
+      "date": "2025-12-05",
+      "note": "Sunny's annual vet visit"
+    },
+    {
+      "id": "7",
+      "petId": 4,
+      "date": "2025-10-30",
+      "note": "Peep cage cleaning and bath"
+    },
+    {
+      "id": "8",
+      "petId": 5,
+      "date": "2025-10-25",
+      "note": "Goldie tank cleaning"
+    },
+    {
+      "id": "9",
+      "petId": 5,
+      "date": "2025-11-25",
+      "note": "Goldie water filter replacement"
+    }
+  ]
+}
