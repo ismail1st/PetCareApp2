@@ -1,25 +1,29 @@
 import { useState } from "react";
+import logo from "/logoanimal.png"; // ✅ works from /public or root
 
 function Login({ onLogin }) {
-  const [username, setUsername] = useState(""); // ✅ changed from name
+  const [username, setUsername] = useState("");
   const [image, setImage] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!username) return alert("Please enter your username"); // updated message
-    if (!password) return alert("Please enter a password");
-    onLogin({ username, image, password }); // send username instead of name
+    if (!username) return alert("Please enter your username");
+
+    // Send username and image to App
+    onLogin({ username, image });
   };
 
   return (
     <div className="login-container">
-      <img src="logoanimal.png" alt="Pet Tracker Logo" className="login-logo" />
+      {/* ✅ This image now loads correctly */}
+      <img src={logo} alt="Pet Tracker Logo" className="login-logo" />
+
       <h2>🐾 Welcome to Pet Care Tracker</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Enter your username" // updated placeholder
+          placeholder="Enter your username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
